@@ -1,0 +1,88 @@
+"""PyAI-Foundry: Exclusively Python All-in-One DS, AI, ML, DL & LLM Toolkit."""
+
+from .architectures import (
+    LoRALinear,
+    MiniGPT,
+    RMSNorm,
+    build_model,
+    count_parameters,
+    inject_lora,
+    list_models,
+    register_model,
+)
+from .ds_utils import (
+    MinMaxScaler,
+    StandardScaler,
+    bootstrap_confidence_interval,
+    correlation_matrix,
+    cosine_similarity_matrix,
+    detect_outliers_iqr,
+    entropy_bits,
+    k_fold_indices,
+    train_val_test_split,
+)
+from .llm_utils import CharTokenizer, DenseRetriever, chunk_text, top_k_top_p_filter
+from .losses import build_loss, list_losses, register_loss
+from .metrics import (
+    binary_roc_auc,
+    bleu_score,
+    classification_report,
+    confusion_matrix,
+    dice_coefficient,
+    mrr_at_k,
+    ndcg_at_k,
+    perplexity_from_loss,
+    psnr,
+    regression_report,
+    rouge_l,
+    ssim,
+    token_accuracy,
+)
+from .trainer import TrainConfig, Trainer, run_kfold_cv, select_device
+
+__version__ = "1.0.0"
+
+__all__ = [
+    "__version__",
+    "StandardScaler",
+    "MinMaxScaler",
+    "train_val_test_split",
+    "k_fold_indices",
+    "detect_outliers_iqr",
+    "correlation_matrix",
+    "bootstrap_confidence_interval",
+    "cosine_similarity_matrix",
+    "entropy_bits",
+    "confusion_matrix",
+    "classification_report",
+    "binary_roc_auc",
+    "regression_report",
+    "psnr",
+    "ssim",
+    "dice_coefficient",
+    "perplexity_from_loss",
+    "token_accuracy",
+    "bleu_score",
+    "rouge_l",
+    "mrr_at_k",
+    "ndcg_at_k",
+    "register_loss",
+    "build_loss",
+    "list_losses",
+    "register_model",
+    "build_model",
+    "list_models",
+    "count_parameters",
+    "LoRALinear",
+    "inject_lora",
+    "RMSNorm",
+    "MiniGPT",
+    "CharTokenizer",
+    "chunk_text",
+    "DenseRetriever",
+    "top_k_top_p_filter",
+    "TrainConfig",
+    "Trainer",
+    "run_kfold_cv",
+    "select_device",
+]

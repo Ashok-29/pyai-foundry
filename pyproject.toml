@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyai-foundry"
+version = "1.0.0"
+description = "Exclusively Python all-in-one toolkit for Data Science, Machine Learning, Deep Learning, Computer Vision, and LLM engineering."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Ashok Kambaluru", email = "kambaluri.ashok@gmail.com"}]
+dependencies = ["torch>=2.0.0"]
+
+[project.scripts]
+pyai-foundry = "pyai_foundry.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
